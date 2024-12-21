@@ -7,7 +7,12 @@
 
     @include abstracts.breakPoint(lg) {
         gap: 10px;
-        margin-left: 39px;
+        margin-left: 40px;
+    }
+
+    @include abstracts.breakPoint(lg) {
+        gap: 10px;
+        margin-left: 0px;
     }
 
     &__title {

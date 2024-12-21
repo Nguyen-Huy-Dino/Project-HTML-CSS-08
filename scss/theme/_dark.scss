@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html.dark {
     --text-color: #ffffff;
     --icon-color: brightness(0) saturate(100%) invert(98%) sepia(3%)
@@ -8,4 +10,12 @@ html.dark {
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-seperate: #ededf6;
     --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
+
+    @include abstracts.breakPoint(lg) {
+        --header-bg-color: #171c28;
+    }
+
+    body {
+        --bg-color: #292E39;
+    }
 }
