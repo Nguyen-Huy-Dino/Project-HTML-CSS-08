@@ -19,6 +19,8 @@ html {
     // Dropdown
     --dropdown-inner-bg-color: #fff;
     --dropdown-inner-shadow: rgba(200, 200, 200, 0.4);
+    --dropdown-arrow-color:#fff;
+    --top-menu-border-color:#D2D1D6;
 
     // Responsive
     @include abstracts.breakPoint(lg) {

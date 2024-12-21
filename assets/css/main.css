@@ -1136,6 +1136,7 @@ html.dark {
   --dropdown-inner-shadow: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(32%)
       saturate(449%) hue-rotate(188deg) brightness(89%) contrast(86%);
+  --top-menu-border-color:#171C28;
 }
 html.dark body {
   --bg-color: #292e39;
@@ -1157,6 +1158,8 @@ html {
   --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
   --dropdown-inner-bg-color: #fff;
   --dropdown-inner-shadow: rgba(200, 200, 200, 0.4);
+  --dropdown-arrow-color:#fff;
+  --top-menu-border-color:#D2D1D6;
 }
 html body {
   --bg-color: #F6F6F6;
@@ -1316,6 +1319,7 @@ html body {
   position: absolute;
   left: 0;
   padding-top: 54px;
+  width: min(1240px, 100%);
   visibility: hidden;
   opacity: 0;
   transition: 0.2s ease-in;
@@ -1334,6 +1338,7 @@ html body {
   position: relative;
   padding: 30px;
   border-radius: 20px;
+  max-height: min(582px, 100vh - 158px);
   background-color: var(--dropdown-inner-bg-color);
   box-shadow: 0px 40px 90px 20px var(--dropdown-inner-shadow);
 }
@@ -1344,6 +1349,63 @@ html body {
   left: var(--arrow-left-pos);
   translate: -50%;
   filter: var(--dropdown-arrow-color);
+}
+
+.top-menu {
+  height: 100%;
+}
+.top-menu__main {
+  width: 292px;
+  height: 100%;
+  border-right: 1px solid var(--top-menu-border-color);
+}
+
+.menu-column {
+  display: flex;
+  gap: 14px;
+}
+.menu-column__icon {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  flex-shrink: 0;
+}
+.menu-column__icon-1, .menu-column__icon-2 {
+  object-fit: cover;
+}
+.menu-column__icon-1 {
+  width: 30px;
+  height: 30px;
+}
+.menu-column__icon-2 {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.menu-column__content {
+  flex: 1;
+}
+.menu-column__heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.menu-column__list {
+  margin-top: 19px;
+}
+.menu-column__link {
+  display: block;
+  padding: 7px 0px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+.menu-column__link:hover {
+  color: #0071dc;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
