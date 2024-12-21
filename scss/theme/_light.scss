@@ -4,18 +4,26 @@ html {
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(5%) sepia(26%)
         saturate(4471%) hue-rotate(234deg) brightness(95%) contrast(91%);
+    // Body
+    body {
+        --bg-color: #F6F6F6;
+    }
 
+    // Header
     --header-bg-color: #eeeeee;
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow:rgba(237, 237, 246, 0.2);
     --top-act-group-seperate: #ededf6;
     --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
 
+    // Dropdown
+    --dropdown-inner-bg-color: #fff;
+    --dropdown-inner-shadow: rgba(200, 200, 200, 0.4);
+
+    // Responsive
     @include abstracts.breakPoint(lg) {
         --header-bg-color: #FFFFFF;
     }
 
-    body {
-        --bg-color: #F6F6F6;
-    }
+   
 }

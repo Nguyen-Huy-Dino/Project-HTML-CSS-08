@@ -5,17 +5,26 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(98%) sepia(3%)
         saturate(267%) hue-rotate(78deg) brightness(114%) contrast(100%);
 
+    // Body
+    body {
+        --bg-color: #292e39;
+    }
+
+    // Header
     --header-bg-color: #171c28;
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-seperate: #ededf6;
     --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
 
+    // Dropdown
+    --dropdown-inner-bg-color: #2f3341;
+    --dropdown-inner-shadow: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(32%)
+        saturate(449%) hue-rotate(188deg) brightness(89%) contrast(86%);
+
+    // Responsive
     @include abstracts.breakPoint(lg) {
         --header-bg-color: #171c28;
-    }
-
-    body {
-        --bg-color: #292E39;
     }
 }
