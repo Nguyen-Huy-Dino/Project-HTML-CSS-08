@@ -6,26 +6,25 @@ html {
         saturate(4471%) hue-rotate(234deg) brightness(95%) contrast(91%);
     // Body
     body {
-        --bg-color: #F6F6F6;
+        --bg-color: #f6f6f6;
     }
 
     // Header
     --header-bg-color: #eeeeee;
     --top-act-group-bg-color: #fff;
-    --top-act-group-shadow:rgba(237, 237, 246, 0.2);
+    --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-seperate: #ededf6;
     --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
 
     // Dropdown
     --dropdown-inner-bg-color: #fff;
     --dropdown-inner-shadow: rgba(200, 200, 200, 0.4);
-    --dropdown-arrow-color:#fff;
-    --top-menu-border-color:#D2D1D6;
+    --dropdown-arrow-color: #fff;
+    --top-menu-border-color: #d2d1d6;
 
     // Responsive
     @include abstracts.breakPoint(lg) {
-        --header-bg-color: #FFFFFF;
+        --header-bg-color: #ffffff;
+        --header-shadow: rgba(237, 237, 246, 0.2);
     }
-
-   
 }
