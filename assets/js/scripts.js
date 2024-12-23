@@ -1,4 +1,4 @@
-// Đọc file template sao chép trên các trangtrang
+// Đọc file template sao chép trên các trang
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
