@@ -1,3 +1,4 @@
+// Đọc file template sao chép trên các trangtrang
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -20,10 +21,9 @@ function load(selector, path) {
         });
 }
 
-/**
- * Hàm kiểm tra một phần tử
- * có bị ẩn bởi display: none không
- */
+//  Hàm kiểm tra một phần tử
+//  có bị ẩn bởi display: none không
+
 function isHidden(element) {
     if (!element) return true;
 
@@ -102,5 +102,27 @@ function handleActiveMenu() {
 
     dropdowns.forEach((dropdown) => {
         dropdown.onmouseleave = () => init();
+    });
+}
+
+window.addEventListener("template-loaded", initJsToggle);
+
+function initJsToggle() {
+    $$(".js-toggle").forEach((button) => {
+        const target = button.getAttribute("toggle-target");
+        if (!target) {
+            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+        }
+        button.onclick = () => {
+            if (!$(target)) {
+                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
+            }
+            const isHidden = $(target).classList.contains("hide");
+
+            requestAnimationFrame(() => {
+                $(target).classList.toggle("hide", !isHidden);
+                $(target).classList.toggle("show", isHidden);
+            });
+        };
     });
 }

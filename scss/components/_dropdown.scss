@@ -16,6 +16,15 @@
             visibility: visible;
             opacity: 1;
         }
+
+        @include abstracts.breakPoint(lg) {
+            width: 100%;
+
+            &:hover .navbar__dropdown {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
     }
 
     &__inner {
