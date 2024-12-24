@@ -1,7 +1,9 @@
-// Đọc file template sao chép trên các trang
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+/**
+ * Hàm tải template
+ */
 function load(selector, path) {
     const cached = localStorage.getItem(path);
     if (cached) {
@@ -21,9 +23,10 @@ function load(selector, path) {
         });
 }
 
-//  Hàm kiểm tra một phần tử
-//  có bị ẩn bởi display: none không
-
+/**
+ * Hàm kiểm tra một phần tử
+ * có bị ẩn bởi display: none không
+ */
 function isHidden(element) {
     if (!element) return true;
 
@@ -42,6 +45,10 @@ function isHidden(element) {
     return false;
 }
 
+/**
+ * Hàm buộc một hành động phải đợi
+ * sau một khoảng thời gian mới được thực thi
+ */
 function debounce(func, timeout = 300) {
     let timer;
     return (...args) => {
@@ -52,6 +59,10 @@ function debounce(func, timeout = 300) {
     };
 }
 
+/**
+ * Hàm tính toán vị trí arrow cho dropdown
+ *
+ */
 const calArrowPos = debounce(() => {
     if (isHidden($(".js-dropdown-list"))) return;
 
@@ -69,6 +80,10 @@ window.addEventListener("resize", calArrowPos);
 // Tính toán lại vị trí arrow sau khi tải template
 window.addEventListener("template-loaded", calArrowPos);
 
+/**
+ * Giữ active menu khi hover
+ *
+ */
 window.addEventListener("template-loaded", handleActiveMenu);
 
 function handleActiveMenu() {
@@ -86,13 +101,19 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -105,6 +126,13 @@ function handleActiveMenu() {
     });
 }
 
+/**
+ * JS toggle
+ *
+ * Cách dùng:
+ * <button class="js-toggle" toggle-target="#box">Click</button>
+ * <div id="box">Content show/hide</div>
+ */
 window.addEventListener("template-loaded", initJsToggle);
 
 function initJsToggle() {

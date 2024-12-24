@@ -13,7 +13,6 @@
         @include abstracts.breakPoint(lg) {
             visibility: visible;
             opacity: 1;
-            transition: initial;
             position: initial;
             padding-top: 0px;
         }
@@ -177,7 +176,6 @@
     @include abstracts.breakPoint(lg) {
         position: initial;
         grid-template-columns: 1fr;
-        display: block;
         padding-left: 0;
     }
 
@@ -191,8 +189,13 @@
         position: initial;
         display: grid;
         inset: initial;
-        max-height: var(--max-inner-height);
+        height: var(--max-inner-height);
         grid-template-columns: repeat(4, 1fr);
         padding-left: 0;
+
+        @include abstracts.breakPoint(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 }
