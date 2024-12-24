@@ -109,6 +109,15 @@
 
     &__arrow {
         margin-top: 3px;
+
+        @include abstracts.breakPoint(lg) {
+            rotate: -90deg;
+            transition: rotate 0.5s;
+        }
+    }
+
+    &__item--active &__arrow {
+        rotate: 0deg;
     }
 }
 

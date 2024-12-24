@@ -6,13 +6,9 @@
         left: 0;
         padding-top: 54px;
         width: min(1240px, 100%);
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.2s ease-in;
+        display: none;
 
         @include abstracts.breakPoint(lg) {
-            visibility: visible;
-            opacity: 1;
             position: initial;
             padding-top: 0px;
         }
@@ -20,12 +16,19 @@
 
     &__item {
         &:hover .navbar__dropdown {
-            visibility: visible;
-            opacity: 1;
+            display: block;
         }
 
         @include abstracts.breakPoint(lg) {
             width: 100%;
+
+            &:hover .navbar__dropdown {
+                display: none;
+            }
+
+            &--active .navbar__dropdown {
+                display: block !important;
+            }
         }
     }
 
@@ -195,6 +198,7 @@
 
         @include abstracts.breakPoint(lg) {
             grid-template-columns: 1fr;
+            display: block;
             height: auto;
         }
     }

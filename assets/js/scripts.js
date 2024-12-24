@@ -129,9 +129,6 @@ function handleActiveMenu() {
 /**
  * JS toggle
  *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
  */
 window.addEventListener("template-loaded", initJsToggle);
 
@@ -154,3 +151,15 @@ function initJsToggle() {
         };
     });
 }
+
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar__item--active");
+        };
+    });
+});
