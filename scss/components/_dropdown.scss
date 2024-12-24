@@ -9,6 +9,14 @@
         visibility: hidden;
         opacity: 0;
         transition: 0.2s ease-in;
+
+        @include abstracts.breakPoint(lg) {
+            visibility: visible;
+            opacity: 1;
+            transition: initial;
+            position: initial;
+            padding-top: 0px;
+        }
     }
 
     &__item {
@@ -19,11 +27,6 @@
 
         @include abstracts.breakPoint(lg) {
             width: 100%;
-
-            &:hover .navbar__dropdown {
-                visibility: hidden;
-                opacity: 0;
-            }
         }
     }
 
@@ -44,22 +47,37 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakPoint(lg) {
+            border-radius: 0px;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0px 40px;
+
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 
 .top-menu {
     --main-column-width: 292px;
-    --max-inner-height: calc(
-        min(582px, 100vh - 158px) - (var(--inner-padding) * 2)
-    );
+    --max-inner-height: calc(min(582px, 100vh - 158px) - (var(--inner-padding) * 2));
 
     position: relative;
 
     &__main {
         width: var(--main-column-width);
-        max-height: var(--max-inner-height);
+        height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakPoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: 0px;
+        }
     }
 }
 
@@ -79,6 +97,10 @@
 
         @include abstracts.breakPoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakPoint(lg) {
+            display: block;
         }
     }
 
@@ -110,17 +132,24 @@
         font-weight: 500;
         line-height: 1.5;
         margin-top: 4px;
+        @include abstracts.breakPoint(lg) {
+            margin-bottom: 19px;
+        }
     }
 
     &__list {
         margin-top: 15px;
+
+        @include abstracts.breakPoint(lg) {
+            margin-top: 10px;
+        }
     }
 
     &__item:hover .sub-menu {
         display: grid;
     }
 
-    &__item--active > &__link, 
+    &__item--active > &__link,
     &__item:hover > &__link {
         color: #0071dc;
         font-weight: 500;
@@ -144,6 +173,19 @@
     inset: 0 0 0 var(--main-column-width);
     padding-left: var(--inner-padding);
     overflow-y: auto;
+
+    @include abstracts.breakPoint(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
+        display: block;
+        padding-left: 0;
+    }
+
+    &__column {
+        @include abstracts.breakPoint(lg) {
+            margin-top: 14px;
+        }
+    }
 
     &--not-main {
         position: initial;
