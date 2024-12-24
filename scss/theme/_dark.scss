@@ -27,6 +27,10 @@ html.dark {
         saturate(1722%) hue-rotate(191deg) brightness(98%) contrast(100%);
     --menu-column-text-color: #B9BABE;
 
+    // Slidebar
+    --slidebar-bg:#292E39;
+    --slidebar-shadow: rgba(23, 28, 40, 0.40);
+
     // Responsive
     @include abstracts.breakPoint(lg) {
         --header-bg-color: #171c28;

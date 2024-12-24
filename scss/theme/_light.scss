@@ -22,6 +22,10 @@ html {
     --dropdown-arrow-color: #fff;
     --top-menu-border-color: #d2d1d6;
 
+    // Slidebar
+    --slidebar-bg:#fff;
+    --slidebar-shadow: rgba(200, 200, 200, 0.4);
+
     // Responsive
     @include abstracts.breakPoint(lg) {
         --header-bg-color: #ffffff;
