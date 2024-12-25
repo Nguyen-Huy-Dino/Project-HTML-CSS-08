@@ -2,8 +2,8 @@
 
 html.dark {
     --text-color: #ffffff;
-    --icon-color: brightness(0) saturate(100%) invert(98%) sepia(3%)
-        saturate(267%) hue-rotate(78deg) brightness(114%) contrast(100%);
+    --icon-color: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(267%) hue-rotate(78deg) brightness(114%)
+        contrast(100%);
 
     // Body
     body {
@@ -20,20 +20,20 @@ html.dark {
     // Dropdown
     --dropdown-inner-bg-color: #2f3341;
     --dropdown-inner-shadow: rgba(23, 28, 40, 0.4);
-    --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(32%)
-        saturate(449%) hue-rotate(188deg) brightness(89%) contrast(86%);
-    --top-menu-border-color:#171C28;
-    --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(1%)
-        saturate(1722%) hue-rotate(191deg) brightness(98%) contrast(100%);
-    --menu-column-text-color: #B9BABE;
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(32%) saturate(449%) hue-rotate(188deg)
+        brightness(89%) contrast(86%);
+    --top-menu-border-color: #171c28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(1722%) hue-rotate(191deg)
+        brightness(98%) contrast(100%);
+    --menu-column-text-color: #b9babe;
 
     // Slidebar
-    --slidebar-bg:#292E39;
-    --slidebar-shadow: rgba(23, 28, 40, 0.40);
+    --slidebar-bg: #292e39;
+    --slidebar-shadow: rgba(23, 28, 40, 0.4);
 
     // Responsive
-    @include abstracts.breakPoint(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: #171c28;
-        --header-shadow: rgba(0, 0, 0, 0.20);
+        --header-shadow: rgba(0, 0, 0, 0.2);
     }
 }

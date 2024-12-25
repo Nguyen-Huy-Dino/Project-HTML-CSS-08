@@ -4,7 +4,7 @@
     position: relative;
     margin: 40px 0;
 
-    @include abstracts.breakPoint(md) {
+    @include abstracts.screen(md) {
         margin: 40px 0;
     }
 
@@ -19,7 +19,7 @@
         flex-shrink: 0;
         padding-top: 34%;
 
-        @include abstracts.breakPoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
         }
     }
@@ -50,7 +50,7 @@
         line-height: 1.44444;
         color: #fff;
 
-        @include abstracts.breakPoint(md) {
+        @include abstracts.screen(md) {
             font-size: 1.4rem;
             line-height: 1.42857;
         }
@@ -74,7 +74,7 @@
             top: 50%;
             translate: 0% -50%;
 
-            @include abstracts.breakPoint(md) {
+            @include abstracts.screen(md) {
                 border-width: 3px;
             }
         }

@@ -2,8 +2,8 @@
 
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(5%) sepia(26%)
-        saturate(4471%) hue-rotate(234deg) brightness(95%) contrast(91%);
+    --icon-color: brightness(0) saturate(100%) invert(5%) sepia(26%) saturate(4471%) hue-rotate(234deg) brightness(95%)
+        contrast(91%);
     // Body
     body {
         --bg-color: #f6f6f6;
@@ -23,11 +23,11 @@ html {
     --top-menu-border-color: #d2d1d6;
 
     // Slidebar
-    --slidebar-bg:#fff;
+    --slidebar-bg: #fff;
     --slidebar-shadow: rgba(200, 200, 200, 0.4);
 
     // Responsive
-    @include abstracts.breakPoint(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: #ffffff;
         --header-shadow: rgba(237, 237, 246, 0.2);
     }
