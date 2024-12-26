@@ -26,9 +26,20 @@ html {
     --slidebar-bg: #fff;
     --slidebar-shadow: rgba(200, 200, 200, 0.4);
 
+    // Browse Categories
+    --heading-color: #1a162e;
+    --cate-item-bg: #eee;
+    --cate-item-thumb-bg:#fff;
+    --cate-item-title-color: #000;
+    --cate-item-desc-color:#1A162E;
+
     // Responsive
     @include abstracts.screen(lg) {
         --header-bg-color: #ffffff;
         --header-shadow: rgba(237, 237, 246, 0.2);
+    }
+
+    @include abstracts.screen(md) {
+        --cate-item-bg: #fff;
     }
 }
