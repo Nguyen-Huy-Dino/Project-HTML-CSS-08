@@ -38,6 +38,15 @@ html.dark {
     --cate-item-title-color: #fff;
     --cate-item-desc-color: #fff;
 
+    // Browse Products
+    --filter-btn-color: #fff;
+    --filter-btn-bg: #171C28;
+    --product-card-bg: #171C28;
+    --product-card-shadow: rgba(0, 0, 0, 0.20);
+    --like-btn-bg: #292E39;
+    --like-btn-shadow: rgba(124, 124, 124, 0.20);
+    --product-card-color: #fff;
+
     // Responsive
     @include abstracts.screen(lg) {
         --header-bg-color: #171c28;
