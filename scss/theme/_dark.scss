@@ -47,6 +47,12 @@ html.dark {
     --like-btn-shadow: rgba(124, 124, 124, 0.20);
     --product-card-color: #fff;
 
+    // Filter form
+    --filter-form-bg: #292E39;
+    --filter-form-drop-shadow: rgba(0, 0, 0, 0.40);
+    --form-label-text-color: #FFF;
+
+
     // Responsive
     @include abstracts.screen(lg) {
         --header-bg-color: #171c28;

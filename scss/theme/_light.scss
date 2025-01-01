@@ -29,9 +29,9 @@ html {
     // Browse Categories
     --heading-color: #1a162e;
     --cate-item-bg: #eee;
-    --cate-item-thumb-bg:#fff;
+    --cate-item-thumb-bg: #fff;
     --cate-item-title-color: #000;
-    --cate-item-desc-color:#1A162E;
+    --cate-item-desc-color: #1a162e;
 
     // Browse Products
     --filter-btn-color: #6c6c72;
@@ -39,8 +39,13 @@ html {
     --product-card-bg: #fff;
     --product-card-shadow: rgba(237, 237, 246, 0.2);
     --like-btn-bg: #fff;
-    --like-btn-shadow: rgba(124, 124, 124, 0.20);
-    --product-card-color: #1A162E;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+    --product-card-color: #1a162e;
+
+    // Filter form
+    --filter-form-bg: #fff;
+    --filter-form-drop-shadow: rgba(200, 200, 200, 0.4);
+    --form-label-text-color: #1a162e;
 
     // Responsive
     @include abstracts.screen(lg) {
