@@ -6,11 +6,18 @@
 .filter {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 53px;
     border-radius: 20px;
     padding: 30px;
     background-color: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-drop-shadow));
+
+    &__arrow {
+        height: 20.5px;
+        position: absolute;
+        top: -18px;
+        right: 22px;
+    }
 
     &__form {
         margin-top: 30px;
@@ -80,6 +87,7 @@
             width: 334px;
             height: 44px;
             padding: 0 16px;
+            
 
             &--small {
                 width: 121px;
@@ -98,6 +106,7 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 1.46667;
+            background-color: transparent;
 
             &::placeholder {
                 font-weight: 400;
@@ -176,5 +185,24 @@
         width: 1px;
         margin: 0 30px;
         background-color: #eee;
+    }
+
+    &__footer {
+        margin-top: 32px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__cancel, &__submit {
+        height: 38px;
+        padding: 0 10px;
+    }
+
+    &__cancel {
+        font-size: 1.5rem;
+    }
+
+    &__submit {
+        font-size: 1.4rem;
     }
 }
