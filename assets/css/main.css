@@ -1260,6 +1260,7 @@ html.dark {
   --filter-form-bg: #292E39;
   --filter-form-drop-shadow: rgba(0, 0, 0, 0.40);
   --form-label-text-color: #FFF;
+  --filter-form-tag-bg: #171C28;
 }
 html.dark body {
   --bg-color: #292e39;
@@ -1301,6 +1302,7 @@ html {
   --filter-form-bg: #fff;
   --filter-form-drop-shadow: rgba(200, 200, 200, 0.4);
   --form-label-text-color: #1a162e;
+  --filter-form-tag-bg: #f8f8fb;
 }
 html body {
   --bg-color: #f6f6f6;
@@ -2050,16 +2052,61 @@ html body {
 .filter__form-slider::before {
   left: var(--min-value);
 }
+.filter__form-select-wrap, .filter__form-input {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
 .filter__form-input {
   min-width: 121px;
   height: 36px;
   padding: 0 12px;
-  border-radius: 6px;
-  border: 1px solid #d2d1d6;
-  color: #1A162E;
+  color: #1a162e;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.42857;
+}
+.filter__form-select-wrap {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.filter__form-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  padding: 0 14px;
+  color: var(--form-label-text-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42857;
+  cursor: pointer;
+}
+.filter__form-select + .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-select-arrow {
+  width: 24px;
+  height: 24px;
+}
+.filter__form-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+.filter__form-tag {
+  color: #9e9da8;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42857;
+  border-radius: 6px;
+  background: var(--filter-form-tag-bg);
+  padding: 6px 12px;
+  transition: color 0.2s;
+}
+.filter__form-tag:hover {
+  color: var(--form-label-text-color);
 }
 .filter__heading {
   color: var(--form-label-text-color);
@@ -2069,7 +2116,11 @@ html body {
 }
 .filter__row {
   display: flex;
-  flex: 1;
+}
+.filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background-color: #eee;
 }
 
 .home__container {
