@@ -60,6 +60,13 @@ html.dark {
     brightness(89%) contrast(86%);
     --filter-footer-bg:#292E39;
 
+    // Auth
+    --auth-intro-bg: #171C28;
+    --auth-intro-text-color:#B9BABE;
+    --auth-content-bg: #292E39;
+    --auth-content-text-color: #B9BABE;
+    --auth-content-text-input-color: #B9BABE;
+
 
     // Responsive
     @include abstracts.screen(lg) {

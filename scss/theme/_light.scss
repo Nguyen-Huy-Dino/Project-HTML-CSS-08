@@ -52,6 +52,13 @@ html {
     --filter-form-tag-bg: #f8f8fb;
     --filter-footer-bg:#fff;
 
+    // Auth
+    --auth-intro-bg: #FAFAFD;
+    --auth-intro-text-color:#1a162e;
+    --auth-content-bg: #fff;
+    --auth-content-text-color: #1A162E;
+    --auth-content-text-input-color: #d2d1d6;
+
     // Responsive
     @include abstracts.screen(lg) {
         --header-bg-color: #ffffff;
