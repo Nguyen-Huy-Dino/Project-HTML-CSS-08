@@ -47,6 +47,7 @@ html {
     --filter-form-drop-shadow: rgba(200, 200, 200, 0.4);
     --form-label-text-color: #1a162e;
     --filter-form-tag-bg: #f8f8fb;
+    --filter-footer-bg:#fff;
 
     // Responsive
     @include abstracts.screen(lg) {

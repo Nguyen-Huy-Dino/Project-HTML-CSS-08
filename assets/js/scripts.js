@@ -3,6 +3,12 @@ const $$ = document.querySelectorAll.bind(document);
 
 /**
  * Hàm tải template
+ *
+ * Cách dùng:
+ * <div id="parent"></div>
+ * <script>
+ *  load("#parent", "./path-to-template.html");
+ * </script>
  */
 function load(selector, path) {
     const cached = localStorage.getItem(path);
@@ -62,6 +68,9 @@ function debounce(func, timeout = 300) {
 /**
  * Hàm tính toán vị trí arrow cho dropdown
  *
+ * Cách dùng:
+ * 1. Thêm class "js-dropdown-list" vào thẻ ul cấp 1
+ * 2. CSS "left" cho arrow qua biến "--arrow-left-pos"
  */
 const calArrowPos = debounce(() => {
     if (isHidden($(".js-dropdown-list"))) return;
@@ -83,6 +92,10 @@ window.addEventListener("template-loaded", calArrowPos);
 /**
  * Giữ active menu khi hover
  *
+ * Cách dùng:
+ * 1. Thêm class "js-menu-list" vào thẻ ul menu chính
+ * 2. Thêm class "js-dropdown" vào class "dropdown" hiện tại
+ *  nếu muốn reset lại item active khi ẩn menu
  */
 window.addEventListener("template-loaded", handleActiveMenu);
 
@@ -129,6 +142,9 @@ function handleActiveMenu() {
 /**
  * JS toggle
  *
+ * Cách dùng:
+ * <button class="js-toggle" toggle-target="#box">Click</button>
+ * <div id="box">Content show/hide</div>
  */
 window.addEventListener("template-loaded", initJsToggle);
 
@@ -138,7 +154,9 @@ function initJsToggle() {
         if (!target) {
             document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
         }
-        button.onclick = () => {
+        button.onclick = (e) => {
+            e.preventDefault();
+
             if (!$(target)) {
                 return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
             }
@@ -148,6 +166,14 @@ function initJsToggle() {
                 $(target).classList.toggle("hide", !isHidden);
                 $(target).classList.toggle("show", isHidden);
             });
+        };
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
         };
     });
 }

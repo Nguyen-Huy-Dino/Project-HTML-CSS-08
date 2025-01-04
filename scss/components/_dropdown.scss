@@ -151,7 +151,7 @@
         }
     }
 
-    &__item:hover .sub-menu {
+    &__item--active  .sub-menu {
         display: grid;
     }
 
