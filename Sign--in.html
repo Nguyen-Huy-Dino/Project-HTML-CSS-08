@@ -23,28 +23,25 @@
     </head>
     <body>
         <main class="auth">
-            <div class="auth__intro">
-                <a href="./" class="logo auth__intro-logo d-none d-md-flex">
-                    <img src="./assets/icons/Logo.svg" alt="" class="logo__img" />
-                    <h1 class="logo__title">grocerymart</h1>
-                </a>
-                <img src="./assets/img/auth/Intro.svg" alt="" class="auth__intro-img" />
+            <!-- Auth intro -->
+            <div class="auth__intro d-md-none">
+                <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img" />
                 <p class="auth__intro-text">
                     The best of luxury brand values, high quality products, and innovative services
                 </p>
-                <button class="auth__intro-next d-none d-md-block js-toggle" toggle-target="#auth-content">
-                    <img src="./assets/img/auth/Intro-arrow.svg" alt="" />
-                </button>
             </div>
-
-            <div id="auth-content" class="auth__content hide">
+            <!-- Auth content -->
+            <div class="auth__content">
                 <div class="auth__content-inner">
                     <a href="./" class="logo">
-                        <img src="./assets/icons/Logo.svg" alt="" class="logo__img" />
-                        <h1 class="logo__title">grocerymart</h1>
+                        <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                        <h2 class="logo__title">grocerymart</h2>
                     </a>
-                    <h1 class="auth__content-heading">Sign Up</h1>
-                    <p class="auth__content-desc">Let’s create your account and Shop like a pro and save money.</p>
+                    <h1 class="auth__content-heading">Hello Again!</h1>
+                    <p class="auth__content-desc">
+                        Welcome back to sign in. As a returning customer, you have access to your previously saved all
+                        information.
+                    </p>
                     <form action="./index-logined.html" class="form auth__content-form">
                         <div class="form__group">
                             <div class="form__text-input">
@@ -52,13 +49,13 @@
                                     type="email"
                                     name=""
                                     id=""
-                                    value="admin@grocerymart.com"
                                     placeholder="Email"
+                                    value="admin@grocerymart.com"
                                     class="form__input"
                                     required
                                 />
-                                <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
-                                <img src="./assets/icons/Message.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
                             <p class="form__error">Email chưa đúng định dạng</p>
                         </div>
@@ -68,33 +65,16 @@
                                     type="password"
                                     name=""
                                     id=""
-                                    value="11111111"
                                     placeholder="Password"
                                     class="form__input"
-                                    minlength="8"
+                                    value="111111111"
                                     required
-                                />
-                                <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
-                                <img src="./assets/icons/Lock.svg" alt="" class="form__input-icon" />
-                            </div>
-                            <p class="form__error">Mật khẩu ít nhất 8 kí tự</p>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__text-input">
-                                <input
-                                    type="password"
-                                    name=""
-                                    id=""
-                                    value="11111111"
-                                    placeholder="Confirm Password"
-                                    class="form__input"
                                     minlength="8"
-                                    required
                                 />
-                                <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
-                                <img src="./assets/icons/Lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                            <p class="form__error">Mật khẩu ít nhất 8 kí tự</p>
+                            <p class="form__error">Mật khẩu ít nhất 8 ký tự</p>
                         </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
@@ -104,22 +84,21 @@
                             <a href="#!" class="auth__content-link form__pull-right">Recovery Password</a>
                         </div>
                         <div class="form__group auth__content-btn-group">
-                            <button class="btn btn--primary auth__content-btn form__submit-btn">Sign Up</button>
+                            <button class="btn btn--primary auth__content-btn form__submit-btn">Sign In</button>
                             <button class="btn btn--outline auth__content-btn btn--no-margin">
-                                <img src="./assets/icons/Google.svg" alt="" class="btn__icon" />
+                                <img src="./assets/icons/google.svg" alt="" class="btn__icon icon" />
                                 Sign in with Google
                             </button>
                         </div>
                     </form>
-
                     <p class="auth__text">
-                        You have an account yet?
-                        <a href="./Sign--in.html" class="auth__link">Sign In</a>
+                        Don’t have an account yet?
+                        <a href="./Sign-up.html" class="auth__link auth__text-link">Sign Up</a>
                     </p>
                 </div>
             </div>
         </main>
-
+        
         <script>
             window.dispatchEvent(new Event("template-loaded"));
         </script>
