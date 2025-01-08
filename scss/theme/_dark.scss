@@ -37,38 +37,44 @@ html.dark {
 
     // Browse Categories
     --heading-color: #fff;
-    --cate-item-bg: #171C28;
-    --cate-item-thumb-bg:#292E39;
+    --cate-item-bg: #171c28;
+    --cate-item-thumb-bg: #292e39;
     --cate-item-title-color: #fff;
     --cate-item-desc-color: #fff;
 
     // Browse Products
     --filter-btn-color: #fff;
-    --filter-btn-bg: #171C28;
-    --product-card-bg: #171C28;
-    --product-card-shadow: rgba(0, 0, 0, 0.20);
-    --like-btn-bg: #292E39;
-    --like-btn-shadow: rgba(124, 124, 124, 0.20);
+    --filter-btn-bg: #171c28;
+    --product-card-bg: #171c28;
+    --product-card-shadow: rgba(0, 0, 0, 0.2);
+    --like-btn-bg: #292e39;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
     --product-card-color: #fff;
 
     // Filter form
-    --filter-form-bg: #292E39;
-    --filter-form-drop-shadow: rgba(0, 0, 0, 0.40);
-    --form-label-text-color: #FFF;
-    --form-tag-bg: #171C28;
+    --filter-form-bg: #292e39;
+    --filter-form-drop-shadow: rgba(0, 0, 0, 0.4);
+    --form-label-text-color: #fff;
+    --form-tag-bg: #171c28;
     --filter-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(32%) saturate(449%) hue-rotate(188deg)
-    brightness(89%) contrast(86%);
-    --filter-footer-bg:#292E39;
+        brightness(89%) contrast(86%);
+    --filter-footer-bg: #292e39;
 
     // Auth
-    --auth-intro-bg: #171C28;
-    --auth-intro-text-color:#B9BABE;
-    --auth-content-bg: #292E39;
-    --auth-content-text-color: #B9BABE;
-    --auth-content-text-input-color: #B9BABE;
+    --auth-intro-bg: #171c28;
+    --auth-intro-text-color: #b9babe;
+    --auth-content-bg: #292e39;
+    --auth-content-text-color: #b9babe;
+    --auth-content-text-input-color: #b9babe;
 
     // Product detail
     --product-detail-bg: #292e39;
+    --product-detail-info-bg: #171c28;
+    --product-detail-info-content-bg: transparent;
+    --product-detail-tag-bg: #292e39;
+
+    // Search bar
+    --search-bar-bg: #171c28;
 
     // Breadcrumbs
     --breadcrumbs-bg: #171c28;
@@ -81,6 +87,12 @@ html.dark {
     }
 
     @include abstracts.screen(md) {
-        --auth-intro-bg: #171C28;
+        --auth-intro-bg: #171c28;
+
+        --product-detail-bg: #292e39;
+        --product-detail-info-bg: transparent;
+        --product-detail-info-content-bg: #171c28;
+
+        --breadcrumbs-bg: #171c28;
     }
 }
