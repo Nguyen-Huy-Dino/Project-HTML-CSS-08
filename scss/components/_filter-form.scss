@@ -40,21 +40,6 @@
     &__form {
         margin-top: 30px;
 
-        &-label {
-            display: block;
-            color: var(--form-label-text-color);
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 1.45455;
-
-            &--small {
-                color: var(--form-label-text-color);
-                font-size: 1.4rem;
-                line-height: 1.42857;
-                margin-bottom: 10px;
-            }
-        }
-
         &-group {
             margin-top: 20px;
 
@@ -93,7 +78,6 @@
             }
         }
 
-        &-select-wrap,
         &-text-input {
             border-radius: 6px;
             border: 1px solid #d2d1d6;
@@ -131,7 +115,6 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 1.46667;
-            
 
             &::placeholder {
                 font-weight: 400;
@@ -147,63 +130,9 @@
             margin-left: 12px;
         }
 
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-            height: 45px;
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-width: var(--width, 108px);
-            height: calc(100% - 10px);
-            padding: 0 14px;
-            color: var(--form-label-text-color);
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42857;
-            cursor: pointer;
-
-            @include abstracts.screen(xl) {
-                flex: 1;
-            }
-        }
-
-        &-select + &-select {
-            border-left: 1px solid #d2d1d6;
-        }
-
         &-select-arrow {
             width: 24px;
             height: 24px;
-        }
-
-        &-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 20px;
-
-            @include abstracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-
-        &-tag {
-            color: #9e9da8;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42857;
-
-            border-radius: 6px;
-            background: var(--filter-form-tag-bg);
-            padding: 6px 12px;
-
-            transition: color 0.2s;
-            &:hover {
-                color: var(--form-label-text-color);
-            }
         }
     }
 
@@ -258,11 +187,13 @@
     }
 
     &__submit {
-        color: #1A162E;
+        color: #1a162e;
         font-size: 1.4rem;
     }
 
-    &__heading, &__content, &__footer {
+    &__heading,
+    &__content,
+    &__footer {
         padding: 0 30px;
     }
 
