@@ -4,10 +4,17 @@
     display: flex;
     flex-direction: column;
     min-height: 80vh;
+    padding-bottom: 50px;
     background: var(--product-detail-bg);
 }
+
 .product-container {
     margin-top: 30px;
+}
+
+.prod-info-content {
+    border-radius: 20px;
+    background: #fff;
 }
 
 .prod-preview {
@@ -17,6 +24,11 @@
         display: flex;
         flex-direction: row-reverse;
     }
+
+    @include abstracts.screen(md) {
+        padding: 16px;
+    }
+
 
     &__list {
         display: flex;
@@ -54,6 +66,7 @@
             flex-direction: column;
             padding-left: 0;
         }
+
         @include abstracts.screen(md) {
             display: none;
         }
@@ -69,10 +82,12 @@
         opacity: 0.9;
         transition: opacity, border-color;
         transition-duration: 0.3s;
+
         &:hover {
             opacity: 1;
             border-color: #9e9da8;
         }
+
         &--current {
             opacity: 1;
             border-color: #ffb700;
@@ -82,15 +97,21 @@
 
 .prod-info {
     padding: 60px;
-    background: #f6f6f6;
+    background: var(--product-detail-info-bg);
 
     @include abstracts.screen(xxl) {
         padding: 40px;
     }
+
     @include abstracts.screen(lg) {
         margin-top: 30px;
     }
 
+    @include abstracts.screen(md) {
+        border-radius: 20px;
+        padding: 0 16px 16px;
+        margin-top: 0;
+    }
 
     &__heading {
         font-size: 2.6rem;
@@ -105,21 +126,25 @@
     &__tag {
         background: #ededf6;
     }
+
     &__card {
         margin-top: 30px;
         padding: 20px;
         border-radius: 6px;
         border: 1px solid #b9babe;
     }
+
     &__row {
         display: flex;
         align-items: center;
     }
+
     &__price {
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
     }
+
     &__tax {
         padding: 2px 8px;
         margin-left: 10px;
@@ -129,15 +154,18 @@
         font-weight: 500;
         line-height: 142.857%;
     }
+
     &__total-price {
         margin: 20px 0;
         font-size: 2.6rem;
         font-weight: 500;
         line-height: 138.462%;
     }
+
     &__add-to-cart {
         flex: 1;
     }
+
     &__like-btn {
         width: 46px;
         height: 46px;
@@ -154,6 +182,10 @@
     @include abstracts.screen(xxl) {
         padding-left: 10px;
     }
+
+    @include abstracts.screen(lg) {
+        padding-left: 0;
+    }
 }
 
 .prod-prop {
@@ -161,14 +193,21 @@
     gap: 16px;
     margin-top: 30px;
 
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
+
+
     &__icon {
         align-self: flex-start;
     }
+
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
     }
+    
     &__desc {
         margin-top: 4px;
         font-size: 1.4rem;

@@ -15,7 +15,7 @@ html {
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-seperate: #ededf6;
     --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
-    
+
     // Footer
     --footer-bg-color: var(--header-bg-color);
 
@@ -50,21 +50,22 @@ html {
     --filter-form-drop-shadow: rgba(200, 200, 200, 0.4);
     --form-label-text-color: #1a162e;
     --form-tag-bg: #f8f8fb;
-    --filter-footer-bg:#fff;
+    --filter-footer-bg: #fff;
 
     // Auth
-    --auth-intro-bg: #FAFAFD;
-    --auth-intro-text-color:#1a162e;
+    --auth-intro-bg: #fafafd;
+    --auth-intro-text-color: #1a162e;
     --auth-content-bg: #fff;
-    --auth-content-text-color: #1A162E;
+    --auth-content-text-color: #1a162e;
     --auth-content-text-input-color: #d2d1d6;
 
-      // Product detail
-      --product-detail-bg: #fff;
-      
-      // Breadcrumbs
-      --breadcrmbs-bg: #f6f6f6;
-      --breadcrmbs-shadow: rgba(237, 237, 246, 0.2);
+    // Product detail
+    --product-detail-bg: #fff;
+    --product-detail-info-bg: #f6f6f6;
+
+    // Breadcrumbs
+    --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 
     // Responsive
     @include abstracts.screen(lg) {
@@ -75,5 +76,10 @@ html {
     @include abstracts.screen(md) {
         --cate-item-bg: #fff;
         --auth-intro-bg: #fff;
+
+        --product-detail-bg: #fafafd;
+        --product-detail-info-bg: #fff;
+
+        --breadcrumbs-bg: #fff;
     }
 }
