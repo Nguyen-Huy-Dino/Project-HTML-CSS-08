@@ -59,6 +59,13 @@ html {
     --auth-content-text-color: #1A162E;
     --auth-content-text-input-color: #d2d1d6;
 
+      // Product detail
+      --product-detail-bg: #fff;
+      
+      // Breadcrumbs
+      --breadcrmbs-bg: #f6f6f6;
+      --breadcrmbs-shadow: rgba(237, 237, 246, 0.2);
+
     // Responsive
     @include abstracts.screen(lg) {
         --header-bg-color: #ffffff;
