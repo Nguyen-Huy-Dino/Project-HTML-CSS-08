@@ -75,6 +75,9 @@ html {
     // Review card
     --review-card-bg: #fafafd;
 
+    // Text content
+    --text-content-hr-bg: #ebebeb;
+
     // Responsive
     @include abstracts.screen(lg) {
         --header-bg-color: #ffffff;
@@ -89,5 +92,7 @@ html {
         --product-detail-info-bg: #fff;
 
         --breadcrumbs-bg: #fff;
+
+        --review-card-bg: #fff;
     }
 }
