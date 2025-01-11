@@ -55,7 +55,6 @@
 
     &--small {
         height: 40px;
-        padding: 0 16px;
     }
 
     + .btn {
@@ -70,6 +69,7 @@
     }
 
     &--primary {
+        color: #171c28;
         background-color: #ffb700;
     }
 
