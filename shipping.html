@@ -457,7 +457,7 @@
                                         required
                                         minlength="2"
                                     />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                    <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
                                 <p class="form__error">Name must be at least 2 characters</p>
                             </div>
@@ -473,7 +473,7 @@
                                         required
                                         minlength="10"
                                     />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                    <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
                                 <p class="form__error">Phone must be at least 10 characters</p>
                             </div>
@@ -488,7 +488,7 @@
                                     class="form__text-area-input"
                                     required
                                 ></textarea>
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
                             <p class="form__error">Address not empty</p>
                         </div>
@@ -503,12 +503,18 @@
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
                                 />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img src="./assets/icons/Form-error.svg" alt="" class="form__input-icon-error" />
 
                                 <div id="city-dialog" class="form__select-dialog hide">
+                                    <button
+                                        class="form__close-dialog d-none d-sm-block js-toggle"
+                                        toggle-target="#city-dialog"
+                                    >
+                                        &times
+                                    </button>
                                     <div class="form__search">
                                         <input type="text" placeholder="Search" class="form__search-input" />
-                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon" />
+                                        <img src="./assets/icons/Search.svg" alt="" class="form__search-icon icon" />
                                     </div>
                                     <ul class="form__options-list">
                                         <li class="form__option">Ha Noi</li>

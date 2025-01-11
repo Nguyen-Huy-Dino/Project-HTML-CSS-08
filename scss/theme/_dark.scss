@@ -62,6 +62,9 @@ html.dark {
     --filter-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(32%) saturate(449%) hue-rotate(188deg)
         brightness(89%) contrast(86%);
     --filter-footer-bg: #292e39;
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-dialog-bg: #2f3441;
+    --form-option-hover-bg: #292e39;
 
     // Auth
     --auth-intro-bg: #171c28;
