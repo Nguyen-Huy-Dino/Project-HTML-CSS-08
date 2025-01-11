@@ -6,6 +6,14 @@
         pointer-events: none;
     }
 
+    &__row {
+        display: flex;
+        gap: 30px;
+        > * {
+            flex: 1;
+        }
+    }
+
     &__group {
         margin-top: 30px;
 
@@ -35,16 +43,38 @@
         }
     }
 
+    &__text-area,
     &__text-input {
         display: flex;
         align-items: center;
-        height: 50px;
         padding: 0 12px;
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
 
+        &--small {
+            border-radius: 8px;
+        }
+
         &:focus-within {
             border-color: #77dae6;
+        }
+    }
+
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__text-input {
+        height: 50px;
+
+        &--small {
+            height: 42px;
         }
 
         @include abstracts.screen(md) {
@@ -52,7 +82,8 @@
         }
     }
 
-    &__input {
+    &__input,
+    &__text-area-input {
         flex: 1;
         height: 100%;
 
@@ -65,8 +96,6 @@
         }
 
         &-icon {
-            margin-left: 12px;
-
             &-error {
                 margin-left: 12px;
                 width: 20px;
@@ -79,6 +108,14 @@
 
         &::placeholder {
             color: var(--auth-content-text-input-color);
+            font-weight: 500;
+            font-size: 1.7rem;
+        }
+    }
+
+    &__input {
+        &-icon {
+            margin-left: 12px;
         }
     }
 
@@ -155,6 +192,7 @@
             line-height: 142.857%;
         }
     }
+
     &__select-wrap {
         display: flex;
         align-items: center;
@@ -162,6 +200,7 @@
         border-radius: 6px;
         border: 1px solid #d2d1d6;
     }
+
     &__select {
         display: flex;
         align-items: center;
@@ -173,13 +212,16 @@
         font-weight: 500;
         line-height: 142.857%;
         cursor: pointer;
+
         @include abstracts.screen(xl) {
             flex: 1;
         }
     }
+
     &__select + &__select {
         border-left: 1px solid #d2d1d6;
     }
+
     &__tags {
         display: flex;
         flex-wrap: wrap;
@@ -188,6 +230,7 @@
             gap: 10px;
         }
     }
+
     &__tag {
         padding: 6px 12px;
         border-radius: 6px;
@@ -197,6 +240,7 @@
         font-weight: 500;
         line-height: 142.857%;
         transition: color 0.2s;
+
         &:hover {
             color: var(--text-color);
         }

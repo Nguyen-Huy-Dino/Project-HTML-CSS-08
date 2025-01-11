@@ -398,7 +398,7 @@
             &:not(:checked)::before {
                 filter: var(--icon-color);
             }
-            
+
             &:checked::before {
                 content: url("../icons/checkbox-checked.svg");
             }
