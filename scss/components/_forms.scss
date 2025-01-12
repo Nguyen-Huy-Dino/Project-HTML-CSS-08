@@ -59,7 +59,7 @@
         align-items: center;
         padding: 0 12px;
         border-radius: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
 
         &:focus-within {
             border-color: #77dae6;
@@ -284,7 +284,7 @@
         &::before {
             width: 19px;
             height: 19px;
-            border: 1.5px solid #9e9da8;
+            border: 1px solid #9e9da8;
             border-radius: 5px;
         }
     }
