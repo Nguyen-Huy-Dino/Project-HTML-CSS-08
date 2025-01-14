@@ -50,8 +50,8 @@
                                     name=""
                                     id=""
                                     placeholder="Email"
-                                  
                                     class="form__input"
+                                    autofocus
                                     required
                                 />
                                 <img src="./assets/icons/Message.svg" alt="" class="form__input-icon" />
@@ -67,7 +67,6 @@
                                     id=""
                                     placeholder="Password"
                                     class="form__input"
-                                  
                                     required
                                     minlength="8"
                                 />
@@ -81,7 +80,9 @@
                                 <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
-                            <a href="./Reset-password.html" class="auth__content-link form__pull-right">Forgot password?</a>
+                            <a href="./Reset-password.html" class="auth__content-link form__pull-right"
+                                >Forgot password?</a
+                            >
                         </div>
                         <div class="form__group auth__content-btn-group">
                             <button class="btn btn--primary auth__content-btn form__submit-btn">Sign In</button>
@@ -98,7 +99,7 @@
                 </div>
             </div>
         </main>
-        
+
         <script>
             window.dispatchEvent(new Event("template-loaded"));
         </script>
